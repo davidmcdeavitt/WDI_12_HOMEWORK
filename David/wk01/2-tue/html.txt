@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+      <script src="loop.exc"></script>
+  </head>
+
+  <body>
+    <h1>open your console</h1>
+
+  </body>
+</html>
