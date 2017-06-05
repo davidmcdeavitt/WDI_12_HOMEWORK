@@ -1,0 +1,95 @@
+
+#head {
+  background-image:url('https://raw.githubusercontent.com/kasun-maldeni/ecardly_CSS/master/images/background.jpg');
+    background-repeat: repeat-x;
+    width: 100%;
+    height: 200px;
+    position: absolute;
+}
+#icon {
+  position: relative;
+  display:inline-block;
+  width: 16.6666666667%;
+  text-align: center;
+  overflow: visible;
+  
+}
+
+}
+section {
+  display: block;
+  margin: 0 1.5%;
+  width: 60%;
+  background-color: white;
+  float: left;
+  padding-right: 10px
+
+}
+
+
+}
+
+}
+body{
+
+  font-family: "Helvetica Neue", Helvetica, Arial;
+}
+#sidebar{
+  background: white;
+  width: 200px;
+  height: 100%;
+  display: block;
+  position: absolute;
+  right: -200px;
+  top: 0px;
+  transition: left 0.3s linear
+}
+#sidebar.visible{
+  right: 0px;
+  transition: right 0.3s linear
+
+}
+ul {
+  margin:0px;
+  padding: 0px;
+}
+ul li a{
+  background: #1c1e1f;
+  color::#ccc;
+  border-bottom:1px solid #111;
+  display: block;
+  width: 180px;
+  padding: 10px;
+  text-decoration-style: none;
+}
+#sidebar-btn{
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+  margin: 20px;
+  position: absolute;
+  top: 0px;
+  right: -60px;
+}
+#sidebar-btn span{
+  height: 1px;
+  background: #111;
+  margin-bottom: 5px;
+  display: block;
+}
+#sidebar-btn span:nth-child(2){
+  width: 75%
+}
+#sidebar-btn span:nth-child(3){
+  width: 75%
+}
+
+footer {
+  display: inline-block;
+  padding: 0;
+  margin: 0 auto;
+  width: 1000px;
+  vertical-align: bottom;
+}

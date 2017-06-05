@@ -1,0 +1,61 @@
+body {
+  background: #eee;
+  margin: 0px;
+  padding: 0px
+}
+.content {
+  width: 1000px;
+  padding: 5px 9px;
+  background: white;
+  border: solid 1px #ccc
+  margin: 0 auto;
+  overflow: hidden;
+}
+#nav{
+  width: 100%;
+  background: #bbb;
+  padding: 5px;
+  margin-left: -5px;
+  overflow: hidden;
+}
+#nav ul{
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+
+}
+#nav li{
+  float: left;
+  display: inline;
+
+}
+#nax a:link, #nav a:visited{
+  padding: 5px;
+  background: black;
+  color: white
+  text-decoration: none;
+  border: solid 1px #fff;
+}
+#nav a:hover, #nav a:active {
+  background: #333
+}
+#left{
+  float: left;
+  width: 200px;
+
+}
+#right{
+  float: left;
+  width: 760px;
+  padding: 0px 12px
+}
+#left h1 {
+  background: black;
+  text-align: center;
+  color: white;
+}
+#right h1 {
+  background: #333;
+  text-align: center;
+  color: white;
+}
