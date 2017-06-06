@@ -1,0 +1,27 @@
+/*this will create a span that can cover 3 columns then 2 on second level and 3 on third*/
+body{
+  width: 80%;
+  margin; 0 auto;
+}
+.span-1, span-2, span-3{
+  margin-right: 3.33333%;
+  float: left;
+  min-height: 100px;
+}
+
+.span-1{
+  background-color: mistyrose;
+  width: 30%;
+}
+.span-2{
+  background-color: linen;
+  width: 63.3333%;
+}
+.span-3{
+  background-color: plum;
+  width: 96.6666%;
+}
+img {
+  width: 100%;
+  
+}

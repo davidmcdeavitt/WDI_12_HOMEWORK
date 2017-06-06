@@ -1,0 +1,68 @@
+/*this will create a span that can cover 3 columns then 2 on second level and 3 on third*/
+body{
+/* width: 80%;
+  margin; 0 auto;*/
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.span-1, span-2, span-3{
+  float: left;
+  min-height: 100px;
+  width: 100%
+}
+
+.span-1{
+  background-color: mistyrose;
+}
+.span-2{
+  background-color: linen;
+}
+.span-3{
+  background-color: plum;
+}
+img {
+  width: 100%;/*respect max image size*/
+
+}
+
+/**********to change for different media***********/
+/**********wont override too specific***********/
+
+@media(min-width: 50em) {
+  body{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .span-1, span-2, span-3{
+    margin-right: 3.33333%;
+    float: left;
+    min-height: 100px;
+  }
+
+  .span-1{
+    background-color: mistyrose;
+    width: 30%;
+  }
+  .span-2{
+    background-color: linen;
+    width: 63.3333%;
+  }
+  .span-3{
+    background-color: plum;
+    width: 96.6666%;
+  }
+  img {
+    width: 100%;
+
+  }
+  nav{
+    margin: 100%;
+  }
+
+
+
+
+}

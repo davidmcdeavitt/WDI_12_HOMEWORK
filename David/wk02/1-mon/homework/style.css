@@ -1,4 +1,6 @@
-
+*{
+  box-sizing: border-box;
+}
 #head {
   background-image:url('https://raw.githubusercontent.com/kasun-maldeni/ecardly_CSS/master/images/background.jpg');
     background-repeat: repeat-x;
@@ -8,27 +10,33 @@
 }
 #icon {
   position: relative;
-  display:inline-block;
   width: 16.6666666667%;
-  text-align: center;
   overflow: visible;
-  
 }
 
 }
-section {
-  display: block;
-  margin: 0 1.5%;
-  width: 60%;
-  background-color: white;
+/*.container{
+  border: 1px solid pink;
+}*/
+.container > *{
+  display: inline-block;
+  overflow: hidden;
+  width: 900px;
+  margin auto 0;
+}
+main{
+  border: 1px solid lime;
   float: left;
-  padding-right: 10px
+  width: 70%;
+}
+aside{
+  width: 28%;
 
 }
-
-
+img{
+  float: left;
+  width: 100%
 }
-
 }
 body{
 
@@ -47,7 +55,6 @@ body{
 #sidebar.visible{
   right: 0px;
   transition: right 0.3s linear
-
 }
 ul {
   margin:0px;
@@ -90,6 +97,7 @@ footer {
   display: inline-block;
   padding: 0;
   margin: 0 auto;
-  width: 1000px;
+  width: 10%;
   vertical-align: bottom;
+  text-align: center;
 }
