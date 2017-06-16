@@ -1,0 +1,13 @@
+div {
+  background-color: yellow;
+  border: 1px solid black;
+  height: 30%;
+  width: 30%;
+  display: inline-block;
+}
+/*float is display block indefault so choose either*/
+/*inline elements create space*/
+div:nth-child(2) {
+  margin-left: -4px;
+}
+/*only selects 2nd line in a div set*/

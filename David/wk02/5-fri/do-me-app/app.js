@@ -30,11 +30,22 @@ btn.addEventListener('click', function(event){
   newListItem.textContent = inputBox.value;
   list.appendChild( newListItem );
 });
-
-inputBox.addEventListener('keypress', function(event) {
-  if (event.keyCode === 13) {
-  console.log(click(btn))
+var ENTER_KEY === 13;
+inputBox.addEventListener('keyup', function(event) {
+  if (event.which === ENTER_KEY) {
   }
 });
+btn.addEventListener('click', function (event) {
+  //use event here
+  //pass event to another function
+  functionBee (e)
+});
+
+function createListItem(event) {
+  var newListItem = document.createElement('li');
+  newListItem.textContent = inputBox.value;
+  list.appendChild( newListItem )
+}
 //
 //CREATING ELEMENTS
+//game over img https://image.flaticon.com/icons/png/512/43/43980.png
