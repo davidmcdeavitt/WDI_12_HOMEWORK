@@ -1,0 +1,28 @@
+<h1>Welcome to the pound</h1>
+<ul>
+<% @languages.each do |lang| %>
+  <li><%= lang %></li>
+<% end %>
+</ul>
+<form action="/">
+  <label for="">stock name</label>
+  <input name="name_animal" type="text">
+  <input name="age_animal" type="text">
+  <input name="gender" type="text">
+  <input name="species" type="text">
+  <input name="toys" type="text">
+
+  <button>Process Animal</button>
+
+
+  <label for="">stock name</label>
+  <input name="name_client" type="text">
+  <input name="children" type="text">
+  <input name="age_client" type="text">
+  <input name="current_pets" type="text">
+  <button>Process Animal</button>
+
+
+
+
+</form>
