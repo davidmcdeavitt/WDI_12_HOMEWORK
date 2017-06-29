@@ -1,18 +1,18 @@
 
 require 'pry'
 
-pokemon = Array({:Pikachu =>	40,
-:Rattata => 20,
-:Pidgeot => 60,
-:Alakazam => 80,
-:Butterfree => 30,
-:Gengar => 70,
-:Moltres => 100,
-:Vulpix => 40,
-:Blastoise => 80,
-:Hitmonchan => 50})
+pokemon = Array({name: 'Pikachu', attack:	40,
+name: Rattata, attack:	20,
+name: Pidgeot, attack:	60,
+name: Alakazam, attack:	80,
+name: Butterfree, attack:	30,
+name: Gengar, attack:	70,
+name: Moltres, attack:	100,
+name: Vulpix, attack:	40,
+name: Blastoise, attack:	80,
+name: Hitmonchan, attack:	50})
 #creat an array to organize the information
-binding.pry
+
 
 #split cards into 3 piles with 4th pile only having one
 
@@ -20,8 +20,18 @@ binding.pry
 
 cards_piles = pokemon.reverse.each_slice(3).to_a.shuffle
 
-card_thiefs = ["Alfred", "Peter"]
-cards_pile.shift(2) >> card thiefs
-#for the last two left
-Array.last_two = cards_pile.each_slice(1).to_a.shuffle
+players = {alfred: cards_piles.shift, peter: cards_piles.shift}
 #randomize who gets which pile
+if rand(0..1) == 0
+players[:alfred].push(groups.shift).flatten!
+players[:peter].push(groups.shift).flatten!
+else
+players[:peter].push(groups.shift).flatten!
+players[:alfred].push(groups.shift).flatten!
+
+#cleaner way for tis to be written
+winner = if rand(0..1) == 0 ? :alfred : :peter
+loser = winner == :alfred ? :peter : :alfred
+
+
+binding.pry

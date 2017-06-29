@@ -1,0 +1,9 @@
+<h1><%= @search_word %></h1>
+
+<% @movie_list.each do |content| %>
+
+<a href="/about?movie<%= content['Title'] %>">
+
+<img class= "list_img" src= <%= content['Poster']%>>
+<%= content['imdbRating'] %></a>
+<%= end %>

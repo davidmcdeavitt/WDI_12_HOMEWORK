@@ -1,0 +1,6 @@
+<h1>Movies App</h1>
+
+<% @movies.each do |movie| %>
+  <h2><a href="/movie_details/<%= movie['name'] %>"<%= movie['name'] %></a></h2>
+  <img src="<%= movie['url'] %>" alt = "">
+<% end %>

@@ -1,0 +1,10 @@
+<h2><@title</h2>
+
+<img src= <%=@image%> alt="">
+
+
+<% @items.each do |content| %>
+  <% if (content[0] != "Poster" && content[0] != 'imdbRating') %>
+    <span><%=content[0]%></span> : <%=content[1] %>
+    <% end %>
+  <% end %>

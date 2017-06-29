@@ -8,15 +8,6 @@ get '/' do
     @languages = ['java', 'ruby', 'python']
 
 
-
-
-
-
-
-
-
-
-
 class Animal
 
 
@@ -45,6 +36,7 @@ class Client
 
 
   def initialize(name_client, children, age_client, current_pets)
+    attr_accessor :name_client, :children, :age_client, :current_pets
     @name_client = params[:name_client]
     @children = params[:children]
     @age_client = params[:age_client]
