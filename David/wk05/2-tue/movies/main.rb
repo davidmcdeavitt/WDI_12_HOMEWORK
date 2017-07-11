@@ -51,7 +51,7 @@ end
 
 get '/movie' do
   movie = params[:movie]
-  result = HTTParty.get("http://omdbapi.com/?s=#{movie}&apikey=2f6435d9").parsed_response
+  result = HTTParty.get("http://omdbapi.com/?s=#{movie}&apikey=ENV").parsed_response
   if (result["Search"].length == 1)
     redirect "/about?movie=#{movie}"
   else

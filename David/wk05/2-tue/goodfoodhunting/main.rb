@@ -4,6 +4,8 @@ require 'sinatra/reloader'
 require 'pry'
 require 'pg'
 
+require_relative 'models/dish'
+
 def run_sql(sql)
     conn = PG.connect(dbname: 'goodfoodhunting')
     result = conn.exec(sql)
@@ -44,6 +46,7 @@ end
 get '/dishes/:id' do
   sql = "SELECT * FROM dishes WHERE id = #{ params[:id] };"
   @dish = run_sql(sql)[0]
+  @comments = run_sql("SELECT * FROM comments WHERE dish_id = #{params[:id]};")
   erb :dish_details
 end
 
@@ -61,4 +64,9 @@ end
 delete '/dishes/:id' do
   run_sql("DELETE FROM dishes WHERE id = #{ params[:id] };")
   redirect '/dishes'
+end
+
+post '/comments' do
+  sql = "INSERT INTO comments (body, dish_id) VALUES ('#{params[:body]}', #{params[:dish_id]})"
+  redirect "/dishes/#{params[:dish_id]}"
 end

@@ -18,17 +18,21 @@ class Scrabble
   # def initialize(word)
   #   @word = word
   # end
-  def self_score(word):
-    total = 0
-    for i in word.chomp
-      total = total+score[i.lower()]
-    return total
+  def self.score(word)
+    @word = word
+    letters = word.upcase.split('')
 
+    total = 0
+    letters.each do |letter|
+      total += letter_scores[letter]
+    end
+
+    total
   end
 
 
+  end
 end
-
 binding.pry
 # puts "Type in word for score"
 # word = gets.chomp
