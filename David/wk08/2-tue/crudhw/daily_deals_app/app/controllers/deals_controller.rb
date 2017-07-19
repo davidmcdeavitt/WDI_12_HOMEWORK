@@ -13,7 +13,7 @@ class DealsController < ApplicationController
     dish.name = params[:name]
     dish.image_url = params[:image_url]
     dish.save
-    redirect_to '/dishes'
+    redirect_to '/deals'
   end
 
 
