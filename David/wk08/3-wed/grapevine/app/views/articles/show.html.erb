@@ -1,0 +1,66 @@
+
+<h1><%= @article.title %></h1>
+
+<%= @article.process_article %>
+
+<div style="width: 400px;">
+<canvas id="chart" width="400" height="400" ></canvas>
+</div>
+
+
+<form action="">
+
+<button id="load-comments">load comments</button>
+</form>
+
+<div class="comments">
+  <p>cake</p>
+  <p>pudding</p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+<script>
+  var loadComments = function(event){
+  event.preventDefault();
+    $.ajax({
+        url: '/api/comments'
+    }).done(function(res) {
+        var $commentsDiv = $('.comments');
+        res.forEach(function(comment){
+          var comment = $('<p>').html(comment.content);
+          $commentsDiv.append( $comment );
+        });
+    });
+  }
+
+$('#load-comments').on('click', loadComments)
+
+
+
+
+
+
+  var ctx = document.getElementById("chart").getContext('2d');
+
+$.ajax({
+    url: '/api/articles/1'
+
+  }).done(function(res){
+
+  new Chart(ctx, {
+    data: {
+      labels: Object.keys(res),
+      datasets: [{
+        data: _.values(res)
+      }],
+    },
+    type: 'polarArea',
+
+  });
+
+});
+
+
+
+</script>

@@ -1,0 +1,13 @@
+
+<a href="/articles/new">new article</a>
+
+<!-- <%= link_to 'new article', new_article_path %> -->
+<% @articles.each do |article| %>
+
+  <!-- <p><%= link_to article.title, article %></p> -->
+
+
+  <!-- or -->
+  <p><a href="/articles/<% article.id %>"><% article.title %></a></p>
+
+  <% end %>
