@@ -1,0 +1,9 @@
+body{
+    background-color: pink;
+}
+.title{
+    color: green;
+}
+.title span {
+    color: red;
+}
