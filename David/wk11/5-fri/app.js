@@ -1,30 +1,27 @@
 'use strict';
 
-class ALLERGIES {
-
-  "128": "cats",
-  "64": "pollen",
-  "32": "chocolate",
-  "16": "tomatoes",
-  "8": "strawberries",
-  "4": "shellfish",
-  "2": "peanuts",
-  "1": "eggs"
-
-};
-
-
-module.export = funtion(number) {
-  this.number = number;
-  this.list = () => {
+var ALLERGIES = function(number){
+    this.allergyList = [
+      "cats" = 128,
+      "pollen" = 64,
+      "chocolate" = 32,
+      "tomatoes" = 16,
+      "strawberries" = 8,
+      "shellfish" = 4,
+      "peanuts" = 2,
+      "eggs" = 1
+  ];
+    this.number = number;
+    this.allergyList = () => {
       return Object.keys(ALLERGIES).reduce((firstAllergy,SecondAlergy) => {
         SecondAlergy & number ? firstAllergy.push(ALLERGIES[firstAllergy]) : firstAllergy;
         return firstAllergy;
       },
   };
-  this.AllergyList = (allergy) => {
+  this.matchAllergy = (allergy) => {
     return this.list().indexOf(allergy) >= 0;
   };
 
   return this;
+}
 }
